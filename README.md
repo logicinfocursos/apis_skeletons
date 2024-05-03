@@ -235,6 +235,188 @@ Com isso, a sua api em [php](https://www.php.net/) está pronta para ser utiliza
 - [PHP](https://marketplace.visualstudio.com/items?itemName=DEVSENSE.phptools-vscode)
 
 
+## 4 - api em python com flask
+Instale o [python](https://www.python.org/downloads/) (se ainda não estiver instalado). Você pode baixá-lo do site oficial do [python](https://www.python.org/downloads/).
+
+Agora vamos iniciar o projeto da nossa api em [python](https://www.python.org/downloads/) usando o framework [flask](https://flask.palletsprojects.com/en/3.0.x/). Os primeiros passos serão através do terminal:
+
+<pre>
+c:\> mkdir my_api
+c:\> cd my-my_api
+c:\my-my_api> 
+</pre>
+
+Em [python](https://www.python.org/downloads/) é comum usar um recurso imensamente importante chamado de ambiente virtual ([venv](https://docs.python.org/3/library/venv.html)), isso irá permitir instalar versões de dependências que afetarão apenas o projeto em questão. Na prática você poderá inclusive manter projetos em versões diferentes do [python](https://www.python.org/downloads/).
+
+<pre>
+c:\my-my_api> python -m venv myenv
+c:\my-my_api> myenv\Scripts\activate
+(myenv) c:\my-my_api> pip install flask
+</pre>
+
+Onde:
+- na primeira linha criamos um ambiente virtual de nome myenv
+-depois "ativamos" esse ambiente usando "activate" (esse procedimento é para o windows, existem pequenas variações do procedimento de ativação no mac e no linux)
+- com o ambiente virtual já ativo, temos a informação "(myenv)", à esquerda do próprio prompt do terminal, já podemos instalar o [flask](https://flask.palletsprojects.com/en/3.0.x/)
+- a instalação das dependências em [python](https://www.python.org/downloads/) ocorrem com o uso do comando [pip](https://pypi.org/) que funciona de forma análoga ao [npm](https://www.npmjs.com/) no [node js](https://nodejs.org/en).
+
+Pronto, agora podemos abrir o visual studio code ou a ide de sua preferência para iniciarmos o projeto.
+
+Um detalhe importante é que podemos criar um arquivo com todas as dependências do projeto. Isso será útil pois podemos baixar as dependências usando apenas esse arquivo. Isso funciona de forma análoga ao package.json do node js.
+
+Caso deseje criar o arquivo de dependências (ação recomendada), no terminal digite:
+<pre>
+(myenv) c:\my-my_api> pip freeze > requirements.txt
+</pre>
+
+Se depois você baixar esse projeto aqui no github e quiser instalar as dependências do projeto através do "requirements.txt", basta fazê-lo da seguinte forma:
+<pre>
+c:\my-my_api> myenv\Scripts\activate
+(myenv) c:\my-my_api> pip install -r requirements.txt
+</pre>
+
+esse é o conteúdo do arquivo requirements.txt
+<pre>
+blinker==1.8.1
+click==8.1.7
+colorama==0.4.6
+Flask==3.0.3
+itsdangerous==2.2.0
+Jinja2==3.1.3
+MarkupSafe==2.1.5
+Werkzeug==3.0.2
+</pre>
+
+Agora basta você criar o arquivo inicial para o seu projeto, por exemplo app.py e copiar o conteúdo do arquivo com o código da api em python usando o flask arquivo [python_flask.py](https://github.com/logicinfocursos/apis_skeletons/blob/main/python_flask.py).
+
+para executar o projeto:
+<pre>
+(myenv) c:\my-my_api> python app.py
+</pre>
+
+Pronto, o servidor estará executando na porta 3005, ou seja [localhost:3005](http://localhost:3005).
+
+Primeiro você ativa o ambiente virtual e depois instala as dependências do projeto
+
+Instale o [flask](https://flask.palletsprojects.com/en/3.0.x/). Abra o terminal no Visual Studio Code e digite o seguinte comando: pip install flask
+
+Salve o código acima em um arquivo chamado app.py no seu workspace do Visual Studio Code.
+
+No terminal do Visual Studio Code, navegue até o diretório onde você salvou app.py e digite o seguinte comando para executar o aplicativo: python app.py
+
+O servidor Flask deve agora estar rodando na porta 3001. Você pode acessá-lo em um navegador web em http://localhost:3001.
+
+### referências em python
+- [python](https://www.python.org/downloads/)
+- [flask](https://flask.palletsprojects.com/en/3.0.x/)
+- [venv](https://docs.python.org/3/library/venv.html)
+
+### plugins para o vscode para o python
+- [python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+- [python debugger](https://marketplace.visualstudio.com/items?itemName=ms-python.debugpy)
+
+
+## 5 - api em python com fastapi
+Instale o [python](https://www.python.org/downloads/) (se ainda não estiver instalado). Você pode baixá-lo do site oficial do [python](https://www.python.org/downloads/).
+
+Agora vamos iniciar o projeto da nossa api em [python](https://www.python.org/downloads/) usando o framework [fastapi](https://fastapi.tiangolo.com/). Os primeiros passos serão através do terminal:
+
+<pre>
+c:\> mkdir my_api
+c:\> cd my-my_api
+c:\my-my_api> 
+</pre>
+
+Em [python](https://www.python.org/downloads/) é comum usar um recurso imensamente importante chamado de ambiente virtual ([venv](https://docs.python.org/3/library/venv.html)), isso irá permitir instalar versões de dependências que afetarão apenas o projeto em questão. Na prática você poderá inclusive manter projetos em versões diferentes do [python](https://www.python.org/downloads/).
+
+<pre>
+c:\my-my_api> python -m venv myenv
+c:\my-my_api> myenv\Scripts\activate
+(myenv) c:\my-my_api> pip install fastapi
+(myenv) c:\my-my_api> pip install uvicorn
+</pre>
+
+Onde:
+- na primeira linha criamos um ambiente virtual de nome myenv
+-depois "ativamos" esse ambiente usando "activate" (esse procedimento é para o windows, existem pequenas variações do procedimento de ativação no mac e no linux)
+- com o ambiente virtual já ativo, temos a informação "(myenv)", à esquerda do próprio prompt do terminal, já podemos instalar o [fastapi](https://fastapi.tiangolo.com/)
+
+- a instalação das dependências em [python](https://www.python.org/downloads/) ocorrem com o uso do comando [pip](https://pypi.org/) que funciona de forma análoga ao [npm](https://www.npmjs.com/) no [node js](https://nodejs.org/en).
+
+Pronto, agora podemos abrir o visual studio code ou a ide de sua preferência para iniciarmos o projeto.
+
+Um detalhe importante é que podemos criar um arquivo com todas as dependências do projeto. Isso será útil pois podemos baixar as dependências usando apenas esse arquivo. Isso funciona de forma análoga ao package.json do node js.
+
+Caso deseje criar o arquivo de dependências (ação recomendada), no terminal digite:
+<pre>
+(myenv) c:\my-my_api> pip freeze > requirements.txt
+</pre>
+
+Se depois você baixar esse projeto aqui no github e quiser instalar as dependências do projeto através do "requirements.txt", basta fazê-lo da seguinte forma:
+<pre>
+c:\my-my_api> myenv\Scripts\activate
+(myenv) c:\my-my_api> pip install -r requirements.txt
+</pre>
+
+esse é o conteúdo do arquivo requirements.txt
+<pre>
+annotated-types==0.6.0
+anyio==4.3.0
+certifi==2024.2.2
+click==8.1.7
+colorama==0.4.6
+dnspython==2.6.1
+email_validator==2.1.1
+fastapi==0.111.0
+fastapi-cli==0.0.2
+h11==0.14.0
+httpcore==1.0.5
+httptools==0.6.1
+httpx==0.27.0
+idna==3.7
+Jinja2==3.1.3
+markdown-it-py==3.0.0
+MarkupSafe==2.1.5
+mdurl==0.1.2
+orjson==3.10.3
+pydantic==2.7.1
+pydantic_core==2.18.2
+Pygments==2.17.2
+python-dotenv==1.0.1
+python-multipart==0.0.9
+PyYAML==6.0.1
+rich==13.7.1
+shellingham==1.5.4
+sniffio==1.3.1
+starlette==0.37.2
+typer==0.12.3
+typing_extensions==4.11.0
+ujson==5.9.0
+uvicorn==0.29.0
+watchfiles==0.21.0
+websockets==12.0
+</pre>
+
+Agora basta você criar o arquivo inicial para o seu projeto, por exemplo main.py e copiar o conteúdo do arquivo com o código da api em python usando o flask arquivo [python_flask.py](https://github.com/logicinfocursos/apis_skeletons/blob/main/python_flask.py).
+
+para executar o projeto:
+<pre>
+(myenv) c:\my-my_api> uvicorn main:app --reload --port 3004
+</pre>
+
+Neste comando, main:app indica que o [uvicorn](https://www.uvicorn.org/) deve importar um objeto chamado app do módulo main.py. A opção --reload indica que o servidor deve ser reiniciado sempre que um arquivo for modificado. A opção --port 3004 indica que o servidor deve ser disponibilizado na porta 3004, , ou seja [localhost:3004](http://localhost:3004).
+
+### referências em python
+- [python](https://www.python.org/downloads/)
+- [fastapi](https://fastapi.tiangolo.com/)
+- [uvicorn](https://www.uvicorn.org/)
+- [venv](https://docs.python.org/3/library/venv.html)
+
+### plugins para o vscode para o python
+- [python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+- [python debugger](https://marketplace.visualstudio.com/items?itemName=ms-python.debugpy)
+
+
 ### referências de uso geral
 - [vscode](https://code.visualstudio.com/download)
 - [postman](https://www.postman.com/downloads/)
