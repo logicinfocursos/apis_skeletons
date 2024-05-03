@@ -30,9 +30,10 @@ class BaseRepository:
 
     def erase(self, id):
         item = self.get_by_id(id)
+      
         if item:
             db[self.entity].remove(item)
-            return item
+            return  db[self.entity]
         return None
 
 class ProductRepository(BaseRepository):
