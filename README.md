@@ -3,7 +3,9 @@ github[apis_skeletons](https://github.com/logicinfocursos/apis_skeletons)
 
 Fico feliz com o seu interesse nesse código realizado com grande carinho. A ideia é ter um template básico para que você possa usar como ponto de partida para os seus próximos projetos de api.
 
-Optei em criar um arquivo para cada linguagem, afim de facilitar a comparação entre os projetos, mas a ideia é utilizar o padrão de projetos MVC e para tanto, sugiro a seguinte estrutura de pastas:
+A ideia é apresentar estruturas de código em diferentes estágios, inicialmente sem acesso a banco de dados e depois usando sqlite e outros sgbd (mysql, postgres, mongodb, firebase, reddis, etc).Também teremos uma versão implementando orms de acordo com a tecnologia empregada.
+
+Inicialmente iremos concentrar todas as funcionalidades concentradas em arquivo único, afim de facilitar a comparação entre os projetos. Independente da tecnologia tentaremos manter o padrão de projetos MVC. Tendo isso em mente, implementaremos a seguinte estrutura de pastas:
 <pre>
 .
 ├── src
@@ -28,6 +30,11 @@ Optei em criar um arquivo para cada linguagem, afim de facilitar a comparação 
 │   └── arquivo inicial (app / main / index)
 ├── assets
 </pre>
+
+no momento já disponibilizamos códigos em
+- node js com javascript + express (arquivo: [node_javascript_express.js](https://github.com/logicinfocursos/apis_skeletons/blob/main/node_javascript_express.js))
+- node js com typescript + express (arquivo:  [node_typescript_express.ts](https://github.com/logicinfocursos/apis_skeletons/blob/main/node_typescript_express.ts))
+- php (arquivo:  [php.php](https://github.com/logicinfocursos/apis_skeletons/blob/main/php.php))
 
 ## 1 - api em node js c/ javascript e express
 arquivo: [node_javascript_express.js](https://github.com/logicinfocursos/apis_skeletons/blob/main/node_javascript_express.js)
@@ -102,15 +109,6 @@ Agora, você pode iniciar o projeto com o comando npm start
 c:\my_api> npm start
 </pre>
 
-### referências:
-- [node.js](https://nodejs.org/en/)
-- [npm](https://www.npmjs.com/)
-- [javascript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
-- [typescript](https://www.typescriptlang.org/)
-- [express](https://expressjs.com/)
-- [npm express](https://www.npmjs.com/package/express)
-- [cors](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/CORS)
-- [npm cors](https://www.npmjs.com/package/cors)
 
 ## 2 - api em node js c/ typescript e express
 arquivo: [node_typescript_express.ts](https://github.com/logicinfocursos/apis_skeletons/blob/main/node_typescript_express.ts)
@@ -190,7 +188,7 @@ Agora, você pode iniciar o projeto com o comando npm start
 c:\my_api> npm start
 </pre>
 
-### referências:
+### referências node:
 - [node.js](https://nodejs.org/en/)
 - [npm](https://www.npmjs.com/)
 - [javascript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
@@ -200,14 +198,55 @@ c:\my_api> npm start
 - [cors](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/CORS)
 - [npm cors](https://www.npmjs.com/package/cors)
 
-### plugins vscode
+### plugins vscode p/node
 - [node essentials](https://marketplace.visualstudio.com/items?itemName=afractal.node-essentials)
--[javascript and typescript nightly](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-typescript-next)
+- [javascript and typescript nightly](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-typescript-next)
+
+
+## 3 - api em php
+arquivo: [php.php](https://github.com/logicinfocursos/apis_skeletons/blob/main/php.php)
+
+Chegou a vez de prepararmos um código de api em [php](https://www.php.net/). A estratégia nesse primeiro momento é usar um código sem dependências externas, apenas php puro. Também iremos abrir mão do uso do [composer](https://getcomposer.org/) e deixaremos de lado o uso de [namespaces](https://www.php.net/manual/pt_BR/language.namespaces.definition.).
+
+Agora, você precisa criar um novo diretório para o seu projeto e inicializar um novo projeto [php](https://www.php.net/). No terminal, navegue até onde você quer criar o projeto e execute os seguintes comandos:
+<pre>
+c:\my_api> mkdir my_api
+cd my-my_api
+</pre>
+
+Normalmente os projetos em [php](https://www.php.net/) iniciam com uma arquivo de nome index.php.
+
+Para executar o seu projeto php
+<pre>
+c:\my_api> php -S localhost:3003
+</pre>
+
+Com isso, a sua api em [php](https://www.php.net/) está pronta para ser utilizada.
+
+### referências em php
+- [php](https://www.php.net/manual/pt_BR/index.php)
+
+
+### plugins vscode para php
+- [PHP Debug](https://marketplace.visualstudio.com/items?itemName=xdebug.php-debug)
+- [PHP Intelephense](https://marketplace.visualstudio.com/items?itemName=bmewburn.vscode-intelephense-client)
+- [PHP Extension Pack](https://marketplace.visualstudio.com/items?itemName=xdebug.php-pack)
+- [PHP IntelliSense](https://marketplace.visualstudio.com/items?itemName=zobo.php-intellisense)
+- [PHP](https://marketplace.visualstudio.com/items?itemName=DEVSENSE.phptools-vscode)
+
+
+### referências de uso geral
+- [vscode](https://code.visualstudio.com/download)
+- [postman](https://www.postman.com/downloads/)
+- [insomnia](https://insomnia.rest/download)
+- [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/)
+
+### plugins vscode de uso geral
 - [live server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
 - [prettier - code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 - [eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 - [thunder client](https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client)
-- [mysql](https://marketplace.visualstudio.com/items?itemName=cweijan.vscode-mysql-client2)
+
 # sobre a logicinfo
 
 somos uma consultoria em T.I. e atuamos com desenvolvimento de aplicações para todos os segumentos e mantemos também uma estrutura de treinamento com as melhores soluções para o aprendizado em programação.
