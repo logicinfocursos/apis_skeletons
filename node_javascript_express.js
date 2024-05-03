@@ -1,5 +1,6 @@
 import express from 'express'
 import cors from 'cors'
+import db from './db.json'
 
 const app = express()
 
@@ -135,37 +136,11 @@ class CategoryController extends BaseController {
 // fim: controladores 
 
 // início: repositórios
-class BaseRepository {
-
-    db = {
-        "product": [{
-            id: 1,
-            name: 'Produto 1',
-            price: 100,
-            categoryid: 1
-        }, {
-            id: 2,
-            name: 'Produto 2',
-            price: 200,
-            categoryid: 2
-        }, {
-            id: 3,
-            name: 'Produto 3',
-            price: 300,
-            categoryid: 2
-        }
-        ],
-        "category": [{
-            id: 1,
-            name: 'Categoria 1'
-        }, {
-            id: 2,
-            name: 'Categoria 2**'
-        }]
-    }
+class BaseRepository {    
 
     constructor(entity) {
         this.entity = entity
+        this.db = db
     }
 
     async getAll() {
